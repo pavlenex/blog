@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>PGP</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../assets/built/screen.css@v=b867028077.css" />
+
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="canonical" href="index.html" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    
+    <meta property="og:site_name" content="Pavle&#x27;s Blog" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="PGP" />
+    <meta property="og:description" content="-----BEGIN PGP PUBLIC KEY BLOCK----- mQINBF7H70sBEACygiZ8r2R4eQB8d1qsFNFu0sKfkcb9z7xmZANNfiKG+Z1vFFRg iLVMGHsrlMPTWiYqjRyjuqkjhLjvAqh+R1jqf/0H7ojKDMHgEnvZ7q69W3ghAWlK 3ZIu1Rz/4YZKwxQ+FwPIM20DlRrfjgirKsOi3hhnZuWODDqIGRCl/MPA4K3hgczp Y8PtNfH/txA4mCffiXKUNJVsL5TxU3s9hqYmKoRCbEnSmCJjxod7xgDs4lbue5rB NdkP1yhTWnb7zzNqK0j2ujz9EiL9Iuj8qs4B59/YpZ1ccz0BBlXALpMrGDZPMU0y MZFDYYFHVMCylCaSDA7VBSPp0YHNNEFqoBTCG6ILAstY2CwV7eJheTzH8FQxdov5 TcSeEeisqXYBeg6LR1EVC+cFO57y8Kz93RrzLzfzuv8bj/4YKwnPCA9UEkf//mH/ ROkf8lX3qNuKEzMzkFX0x4N8zrZDe5bTaQm4QhnyAOEG2HhdNYRADk03ig0GfAF0 5XEsHBZIZWHcL25hKzgEAVf3FNWVbZzbNBPvcFYDcb1LzBXUqq5gj/n9bllvvdDp 6iw4JAZ3B2FKgrQdCVKvxH7g1XsgjcKFsHW2zrLVYGcm/+7A27S+TT5A6n7nq31C 06uhQzVffeuQEcDfCTreLR6pUlh7zZ8EHmhQrUnZuCCHfyy63De1kD11gQARAQAB tB5QYXZsZSA8cGF2bGVAYnRjcGF5c2VydmVyLm9yZz6JAk4EEwEKADgCGwEFCwkI BwIGFQoJCAsCBBYCAwECHgECF4AWIQQH4ZGanFnQSVm+SEZoHV6pEdB2VwUCXsfw 3gAKCRBoHV6pEdB2V5OvD/9BkaBn1/97iW5Dfl/9xSkrXq2XvujKk6FVsAopc+ms vOMgdIT+CnUKAhBsCyJ/ubTDVwG2/ig6/9ZCRrxW7vOeIN8/bROjvoiX7NXrQ0vZ E6q98Nq5e6NbuI2pNgeXfriKBAE/HjfdTF4ZkC3lezEzfr6mnEhYUv74+dOWHIrQ HjbmJXNGjKElBlssnRclqdEGbwuYEbJwIFqMo6aodBiGvodtNqt3wsipGJ1zldzu dTZgVaHDbr/He3S4ugUSoh3yNwzGCVJ9Modk1YMaxK43TyNyWZEFsClfGwfk210y" />
+    <meta property="og:url" content="pavlenex.github.io/blog/pgp/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="PGP" />
+    <meta name="twitter:description" content="-----BEGIN PGP PUBLIC KEY BLOCK----- mQINBF7H70sBEACygiZ8r2R4eQB8d1qsFNFu0sKfkcb9z7xmZANNfiKG+Z1vFFRg iLVMGHsrlMPTWiYqjRyjuqkjhLjvAqh+R1jqf/0H7ojKDMHgEnvZ7q69W3ghAWlK 3ZIu1Rz/4YZKwxQ+FwPIM20DlRrfjgirKsOi3hhnZuWODDqIGRCl/MPA4K3hgczp Y8PtNfH/txA4mCffiXKUNJVsL5TxU3s9hqYmKoRCbEnSmCJjxod7xgDs4lbue5rB NdkP1yhTWnb7zzNqK0j2ujz9EiL9Iuj8qs4B59/YpZ1ccz0BBlXALpMrGDZPMU0y MZFDYYFHVMCylCaSDA7VBSPp0YHNNEFqoBTCG6ILAstY2CwV7eJheTzH8FQxdov5 TcSeEeisqXYBeg6LR1EVC+cFO57y8Kz93RrzLzfzuv8bj/4YKwnPCA9UEkf//mH/ ROkf8lX3qNuKEzMzkFX0x4N8zrZDe5bTaQm4QhnyAOEG2HhdNYRADk03ig0GfAF0 5XEsHBZIZWHcL25hKzgEAVf3FNWVbZzbNBPvcFYDcb1LzBXUqq5gj/n9bllvvdDp 6iw4JAZ3B2FKgrQdCVKvxH7g1XsgjcKFsHW2zrLVYGcm/+7A27S+TT5A6n7nq31C 06uhQzVffeuQEcDfCTreLR6pUlh7zZ8EHmhQrUnZuCCHfyy63De1kD11gQARAQAB tB5QYXZsZSA8cGF2bGVAYnRjcGF5c2VydmVyLm9yZz6JAk4EEwEKADgCGwEFCwkI BwIGFQoJCAsCBBYCAwECHgECF4AWIQQH4ZGanFnQSVm+SEZoHV6pEdB2VwUCXsfw 3gAKCRBoHV6pEdB2V5OvD/9BkaBn1/97iW5Dfl/9xSkrXq2XvujKk6FVsAopc+ms vOMgdIT+CnUKAhBsCyJ/ubTDVwG2/ig6/9ZCRrxW7vOeIN8/bROjvoiX7NXrQ0vZ E6q98Nq5e6NbuI2pNgeXfriKBAE/HjfdTF4ZkC3lezEzfr6mnEhYUv74+dOWHIrQ HjbmJXNGjKElBlssnRclqdEGbwuYEbJwIFqMo6aodBiGvodtNqt3wsipGJ1zldzu dTZgVaHDbr/He3S4ugUSoh3yNwzGCVJ9Modk1YMaxK43TyNyWZEFsClfGwfk210y" />
+    <meta name="twitter:url" content="pavlenex.github.io/blog/pgp/" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Pavle" />
+    <meta name="twitter:site" content="@pavlenex" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Pavle&#x27;s Blog",
+        "url": "pavlenex.github.io/blog/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://static.ghost.org/v1.0.0/images/ghost-logo.svg"
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Pavle",
+        "sameAs": []
+    },
+    "headline": "PGP",
+    "url": "pavlenex.github.io/blog/pgp/",
+    "description": "-----BEGIN PGP PUBLIC KEY BLOCK-----\n\nmQINBF7H70sBEACygiZ8r2R4eQB8d1qsFNFu0sKfkcb9z7xmZANNfiKG+Z1vFFRg\niLVMGHsrlMPTWiYqjRyjuqkjhLjvAqh+R1jqf/0H7ojKDMHgEnvZ7q69W3ghAWlK\n3ZIu1Rz/4YZKwxQ+FwPIM20DlRrfjgirKsOi3hhnZuWODDqIGRCl/MPA4K3hgczp\nY8PtNfH/txA4mCffiXKUNJVsL5TxU3s9hqYmKoRCbEnSmCJjxod7xgDs4lbue5rB\nNdkP1yhTWnb7zzNqK0j2ujz9EiL9Iuj8qs4B59/YpZ1ccz0BBlXALpMrGDZPMU0y\nMZFDYYFHVMCylCaSDA7VBSPp0YHNNEFqoBTCG6ILAstY2CwV7eJheTzH8FQxdov5\nTcSeEeisqXYBeg6LR1EVC+cFO57y8Kz93RrzLzfzuv8bj/4YKwnPCA9UEkf//mH/\nROkf8lX",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "pavlenex.github.io/blog/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 3.16" />
+    <link rel="alternate" type="application/rss+xml" title="Pavle&#x27;s Blog" href="../rss/index.html" />
+
+</head>
+<body class="page-template page-pgp">
+
+    <div class="site-wrapper">
+
+        
+<header class="site-header">
+    <div class="outer site-nav-main">
+        <div class="inner">
+            <nav class="site-nav">
+    <div class="site-nav-left-wrapper">
+        <div class="site-nav-left">
+                <a class="site-nav-logo" href="../index.html"><img src="https://static.ghost.org/v1.0.0/images/ghost-logo.svg" alt="Pavle&#x27;s Blog" /></a>
+            <div class="site-nav-content">
+                    <ul class="nav" role="menu">
+    <li class="nav-home" role="menuitem"><a href="../index.html">Home</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    <div class="site-nav-right">
+            <ul class="nav" role="menu">
+    <li class="nav-pgp nav-current" role="menuitem"><a href="index.html">PGP</a></li>
+</ul>
+
+
+    </div>
+</nav>
+        </div>
+    </div>
+</header>
+
+
+<main id="site-main" class="site-main outer">
+    <div class="inner">
+
+        <article class="post-full post no-image page no-image">
+
+            <header class="post-full-header">
+                <h1 class="post-full-title">PGP</h1>
+            </header>
+
+
+            <section class="post-full-content">
+                <div class="post-content">
+                    <p>-----BEGIN PGP PUBLIC KEY BLOCK-----</p><p>mQINBF7H70sBEACygiZ8r2R4eQB8d1qsFNFu0sKfkcb9z7xmZANNfiKG+Z1vFFRg<br>iLVMGHsrlMPTWiYqjRyjuqkjhLjvAqh+R1jqf/0H7ojKDMHgEnvZ7q69W3ghAWlK<br>3ZIu1Rz/4YZKwxQ+FwPIM20DlRrfjgirKsOi3hhnZuWODDqIGRCl/MPA4K3hgczp<br>Y8PtNfH/txA4mCffiXKUNJVsL5TxU3s9hqYmKoRCbEnSmCJjxod7xgDs4lbue5rB<br>NdkP1yhTWnb7zzNqK0j2ujz9EiL9Iuj8qs4B59/YpZ1ccz0BBlXALpMrGDZPMU0y<br>MZFDYYFHVMCylCaSDA7VBSPp0YHNNEFqoBTCG6ILAstY2CwV7eJheTzH8FQxdov5<br>TcSeEeisqXYBeg6LR1EVC+cFO57y8Kz93RrzLzfzuv8bj/4YKwnPCA9UEkf//mH/<br>ROkf8lX3qNuKEzMzkFX0x4N8zrZDe5bTaQm4QhnyAOEG2HhdNYRADk03ig0GfAF0<br>5XEsHBZIZWHcL25hKzgEAVf3FNWVbZzbNBPvcFYDcb1LzBXUqq5gj/n9bllvvdDp<br>6iw4JAZ3B2FKgrQdCVKvxH7g1XsgjcKFsHW2zrLVYGcm/+7A27S+TT5A6n7nq31C<br>06uhQzVffeuQEcDfCTreLR6pUlh7zZ8EHmhQrUnZuCCHfyy63De1kD11gQARAQAB<br>tB5QYXZsZSA8cGF2bGVAYnRjcGF5c2VydmVyLm9yZz6JAk4EEwEKADgCGwEFCwkI<br>BwIGFQoJCAsCBBYCAwECHgECF4AWIQQH4ZGanFnQSVm+SEZoHV6pEdB2VwUCXsfw<br>3gAKCRBoHV6pEdB2V5OvD/9BkaBn1/97iW5Dfl/9xSkrXq2XvujKk6FVsAopc+ms<br>vOMgdIT+CnUKAhBsCyJ/ubTDVwG2/ig6/9ZCRrxW7vOeIN8/bROjvoiX7NXrQ0vZ<br>E6q98Nq5e6NbuI2pNgeXfriKBAE/HjfdTF4ZkC3lezEzfr6mnEhYUv74+dOWHIrQ<br>HjbmJXNGjKElBlssnRclqdEGbwuYEbJwIFqMo6aodBiGvodtNqt3wsipGJ1zldzu<br>dTZgVaHDbr/He3S4ugUSoh3yNwzGCVJ9Modk1YMaxK43TyNyWZEFsClfGwfk210y<br>k5KiRX/WYShsUahBMpAbCYMMafDuujmlisSgDWwWNoyCnluQjB63MMnzgNy82QOu<br>BgdfxGjjB4s6xNw142Sv2lKYo+09V9IGVM793PI33XPf8ZA347Hc1iBF8XkXEzOv<br>9FTfPyEWeIhDkDa+mVEQJ0O5NmXkzfAvJjT1PvsVGNFZkRJfM7t/ZU+M5Nac9V22<br>JHk39PaFYgBHPUZXAfasajq+q137JFrM18PMKrePld8rl9sZerTOhY41qt1xsq4I<br>d8vPnNHC/gHUY1JSmWnIeAlJOUP19h2vSk/6LCQiFGn8Y+ryVgG6W9bvq4nriV5S<br>e43LjWaxrSjhhunVQ1+S88+mqq6+WSnp3BCYSFHMKmFKB+s+kvsp30RB7/h6pC+a<br>OrQXUGF2bGUgPHBhdmxlQHBhdmxlLm9yZz6JAlEEEwEKADsCGwEFCwkIBwIGFQoJ<br>CAsCBBYCAwECHgECF4AWIQQH4ZGanFnQSVm+SEZoHV6pEdB2VwUCXsfw3gIZAQAK<br>CRBoHV6pEdB2V32fEACNGRhw8u+Tn1hwAV6CsenixAVZMkrPJLotoqw6PYCWhPEe<br>G/uKLAI2uXFVfC+FzvQ2IBltI1M6Js7Svg1qhbhYOZlTtHtc712jsOQOKcCigPLV<br>GrOhahIRZkEsF4GcHO5wW4GyA/plwB1PD4eycxk/xM7xn0CDTHIaBRtnk1N8ZoE9<br>xX/HPBZqgh8nwfoktqMxC+reDAc+9fxH88fuEHXIo4VO+a2ext9/AHdhdIOlpCQh<br>ozoDtVo79mifnclVsKSKlK03rKkzZoM17z7Mk22LvxqdsKildfUnEkeCMooNkx43<br>r6z3n+qEbw+2kY4ntnm0Bk7YINkC7Y7/GXoh8UxxwPpQmsxzCXpfDhosx/NhJuso<br>NbZ1PPppR5dl/d/NfJj1XJB2bF/Ef3rABEnpAUXxWa5DiG/pGVni+Ilaz4hhWMyt<br>RFXGrvsDMh1TJ0Jr5Fd1cZD5Mcy4utlPZXpGErhpxXQLq/QRJAO3b5u6kO/jNBvl<br>8DStV0PHA9MsbeyP+cWh1tSubbRT6xYlWUHx6ShB4yKkVd2qVkfPJF41QzZpDazi<br>pQQ2Dm+eK1zPeGFgyVShrAHJosjLIjMNs67OMKzSz/QZFDwe7b1/xAS6SR+Xx2MR<br>BiWx9DAjOQ9mQgtjO2zrjIr17nx+7BIgVlkPDu5Wml5LzGoHHIFAYkTKiqHtebQk<br>UGF2bGVuZXggPHBhdmxlbmV4QGJ0Y3BheXNlcnZlci5vcmc+iQJOBBMBCgA4FiEE<br>B+GRmpxZ0ElZvkhGaB1eqRHQdlcFAl7H8AwCGwEFCwkIBwIGFQoJCAsCBBYCAwEC<br>HgECF4AACgkQaB1eqRHQdlfd+Q//TGuV4xV6fi3EisLA2fLPbilrtof5bf8WNcAQ<br>oUbUwe08TzYSjsXa9jL8cfc0mtJWLkOytD01DG5GpfIt8WgnOxC/1VCN9fFwkuQA<br>bI7UcDbsC73aFB7fAhiZLMZSl41i/9oVc0zvJg+v69cq8x0VZrtoijfWlVIlI/x/<br>L6QqFRqPDVgYy/UJkAfyRyv44BYE+VvVO8lMoq2M2IpQAkc+FfvAM39FmZjf//S5<br>UaMWwLqBddXJS1+Fz1y8nS/HfVo/c1AcFzftCLGP2TI7m1T0l6jKr1SAKp8x5Tnu<br>WVNQbo2QlvHzwQsbizNfPe7SncdCB4OeejpdZFFdpInI9aUqHIb4boaOyr6PRhva<br>75Qp5gq5XIiCSs2H2D73QmYWAEjYMLkeHW1onMXmUrrttbXNnA5GoTRIZ3qKDeQD<br>H7dzQC4ZS7IjGIPDz72mAx2c7hzABcHBODGqWXbF67hUiipHJfACjE8kbj4zX2Hj<br>e8T+X5MGcvQo866sq3dApK5I6qb8p7naRYWdzmasm6dB8Eqj7p/STkmMQpmJYEnv<br>+GYxvKjvbslOh7KesDRVa9SzrnBs9Dv/p+SC7CJKXzM33PJd8GWAAFgKlg77lwhY<br>u5sWO8FAS7SkpJd6VID4dhgXmyIgz8tVCEhLWXQPRoJD+dg78NGiBbEx8miG/d+R<br>daVKHQG5Ag0EXsfvkwEQANDqTBVV0qsWaFwv40h1Lx1qzAPV8GLt2s2HoejripOU<br>V8Hsfsfojn0gjGfOGgsQJ0sUelPb03UcjbKNgKJ1u1M+0GqRD4Cf+GPyHS2RJvA6<br>IkRebVWtvHIXqeH7+RIhPI5rSYbkaxe3xQony3rTPc/YG3i6/K5raq3atXngoOQ/<br>tbklft4byQGC3LbGLI6cV3MMitSGMnaBLkDT1hgGAMicsj2TamAONElt9BlEOYj5<br>/QpPMNkznlRExhQd5zctggYKwWaOmpmF0JRYzNUiHTZRU4GlvODoUuXeatzc2Vao<br>1xWqPSsnlflWOzXy26RubEwbjxmthp5rnTQthzPOttTezq9lTOMyVE0V6CUqkTVJ<br>gTpqOV4StOZVEzHIc3bXf/G1U1VUcymEf5jQAW/deGVwYGHvE7bUFnNTg7m9VrSh<br>LChhlVbhDg0l4X9rcIpvIj0fBZgDdrPEr2DaF9pVuvBnJ8mYtJ8VQKBKTGrgSlTL<br>Z7rkT2RH1Nl0vpOjHnSOoArtbevCPR1qan/wV/c7MKSVOGU81Ujyu0FoVr4JTjwU<br>Sk/n8YlBwT+IHtMjSP7d9mtQMgSAtMPDd1vn7X4K1C4ovkNN4aRjlZEBhglez+9T<br>UtqzFWehPDNeCPl/5A/+FDucYWCaf0k3A9kEaNelvyrByoNbgeuc1vHYyKWCHqbf<br>ABEBAAGJBHIEGAEKACYWIQQH4ZGanFnQSVm+SEZoHV6pEdB2VwUCXsfvkwIbAgUJ<br>CWYBgAJACRBoHV6pEdB2V8F0IAQZAQoAHRYhBBuQNFB4E+wq8A3drQDdoPSpHqtY<br>BQJex++TAAoJEADdoPSpHqtYB4YP/RBFUteupGBYnD7PSSuzzPBelRqOOzKnuFrk<br>xIFQbThwnkmB1yReVcIYqCfhJRyGA53Gx5U8Y98nnn9sgCOVTMa7kmWd3CDuKpp+<br>BHE+Hb4TURr5tK5N0uvUwwgcm80Jc06F5L5NoUxEv7gctrhTFYCP63pGxTxmwFv7<br>GHIlytgeLE99aq2VR9A2dJ+/mfli+1K2wSgXyMQpCs5hxo6vKJDTdIIDzmwRJ6ML<br>Kp0Omc2yIXZ++0OIsUKizjDIIg6vUGmiicZeaBJ2iN0PyE9buS6n9KvkbCXtN/sE<br>mk3aMu7KpyCmvwTA0Nu52KtbHlaQl4T3CdkDjUnGzdoXLWtAUqLtthHcPV3UpXR2<br>A8msRZ+8xC3Hwgj0UILF0LT8Yi8oHEBlcsqZBK6vlpbj79rcgv3FpNokrQYvo5cL<br>IpUhcZxBEpLojLcuHFIxVW+haEtWWlg5rTWBnYVSDofJBMQkCpn98lBmPXwnUNB7<br>KDw+lzZxvleWYcA3SA/2bfslGeVInAgAFpap2WhMotDkZ/fgAG7zLlKxGi37+AwL<br>4u4R2deCy54G3y3Q40mOrETiag9JbPdu28kXifPzjM2zkSKqzE43EEFZarMZtF/N<br>OIv3ymetj2Jts15wjfYQG27bQFMS6bYVTai0LhXtmaTm9iczc75LTEXMGTiA2+mI<br>tJuOG9grivAP/2LbSwBBGlrsy0uIwGH58k7lNgan/2FM3OhRhA+OAxzFD5Y8hgje<br>X/h/fn5cb/JvRn1DXTb+lS2i59vGPdRpfrfHImqwgaNU0ZWW1Dp+BO7RT03KpTgC<br>geh04n+J71cnpqXQAtCF9eEzUMvqOo1kQcvKspZ4TH2K38XNUg6ZcWEM62/sx2IW<br>NQrvFD/CWCRy98dUcbEc5XfVxsbXGfd6wpdTiz2SDlpV2YTYhJzQmVsTQu4wRqvN<br>GcEmb65xzRzGuYOhFrITAAzOBs3pX1X0+WcCCsKBep47R6OJ+yUp2tE3t794AcG+<br>Og1xSrI0XwcEdgfR4lDKaTbVvQtn2xnD9feCqT0TXS43qaVQD7FKCb+lSbDB5mya<br>bDuaGwyMkoq0jVMJwPKOWHNrO3Pm6XlgTrDG1kscO4gHcyv2vQVAybyus868jvSx<br>9LGgwAFMkw0pj2eEMP5D8kNLxrD3k+wq4gyE/ieg9IsjgN6KsAZZAsqPm/0oiFUi<br>pNDAKJYmrEoy7HMiOlMFSiqYARqldRGd/HxYHSDuUS91E+8fr13L9mXCVpGqBPZc<br>r9txrWBULriYsxyixbZOgR+ccWdMSgD9OlTWdMpDg8dodZGBZApg16kpO3NCKLwq<br>UldArjmuMwN7grDhj35xfej4Fe7LxqBSbi0jpl7bDyMxG1hwXUqzb7qyuQINBF7H<br>764BEADYjN3OpgWyycCmWES4zMTeEVjdX/ogCQ7HGl9rRF9RH54O51nFD34pJAY5<br>4/eO0lA9wk+1QbsB9ar8sdm6ilcmNYNdGjCBNNlIelvm0aAO6+5nfoq2rxD+GU90<br>hP7YVKzWnZ8u5le48lx/3qvrcofv0dVdKvSfgq0ELLlwst/3F8c99i2lcPuATodN<br>DuLzjZu/amhrxtlEj/NtEsHvnPdHZ0c5EiCOX67DC8pzML/mrPwq7WflvLXV9V7Q<br>8XEr3RHj7siIZwxYRq2NcPrPZ/2bMd+R4BJMv5QMzkNFrKePwDkYheNBuuEqn1ES<br>R8CQjBa4ICKWDSjO9t6kB24/voqn3c3PoqVTEWNZ4DaEePBjBgKNkkmDCn5t6+N1<br>JHiMfD9dW3XYgQu3tikPEp1+Dz2MpKoX7amWS8RlganKP2n2mV+Zyg6UPvvHQ8yp<br>BV5o2TuRJFybOTA3t1POpE7jQkJHPGM/O4Gzpl+eoUl9gqw09yhUQiqMOhOiTuAQ<br>b4eGeQbojDBJMfFK1cvWF/K+fYeQ+kf7zYH9ANVS9jGJhQkuJ30941G4QMtEmWH/<br>CKgGkiFXF0TfxRq59NHB0n50dzJrGYrRxn+wuty7WVeour678Is0YmYRS8HKuWdx<br>qEE50Xe0Wm6UqYlODMie04BWJAtWGGS5edhGyoJNk67xBTFNEwARAQABiQI8BBgB<br>CgAmFiEEB+GRmpxZ0ElZvkhGaB1eqRHQdlcFAl7H764CGwwFCQlmAYAACgkQaB1e<br>qRHQdlcqgA//U7ivt0Wg20tlefT8a5x6JNb8wF1nbPmaKogPT3Rpn+TJdmmGBRFu<br>h2EtZwZnJbSp6tU+gtrVmg4xHcJrlx9+X/RdKQMixpk1jajsNroUJVKug4NvHFuQ<br>F+wv/dzNcAQBVuMccRMYawN3ytfk6TZgY9Z5d5yIbat9IzkPjFkoPDIIRtjaF1AT<br>up2ePSDBBB24bDv0s4tAZZkVFD9UNTphHxntem4SIUZOPy+RmiOdoNvSTHy7PUXV<br>QcaCik231oRlSMwa1S66VUfi2xuyUG5vjypj/79LjrvtGpiC3qPec++ZP/Cr0vK0<br>QO08R19QAsOGJnO3LjoCJ2q0JiGQfnT4jaejXBMdHGXmGqLRGCGQn9dEBA5n+Izh<br>3d7HbHcw2HfmoIxQZoOVZaHFKDMoKIm4iCXBc/J2Jq0UCz2TXHHxSkVwCAznece7<br>YzAT0pfMntcEHtHYPXgad1zQ6enxxacwKzSG1ImBNXRiCsWv+OAzqC7QsD3W+Ul2<br>52gMfw4njV1arXAM1S4SSi+79SxegxK5VcSORTiNpenmi+itGZP+/dwWbtSTFZuR<br>dlbkpbCIX0cYVNCqnug6LrtZamfWn6MDIsKw0jXAFh1fNPaaqneLAqu4JxPyY7JP<br>rn/8h4A0KZxWJEBBci+L6OCgxRu/eo7PnG2cL0goaVGkH4ptOa2YJZO5Ag0EXsfv<br>2gEQAN0v5QUw9EplmEIQoffG7zl0sUserJ3NK9f+IsHs4IdMDlS/dLnT+H7dSsHj<br>EnNlPdOcFiVHx46/c/C+tCHw3PCaHU0hTLah7lCEpC5Ez8nascm5Oo5LkXl7gYJc<br>3NFbnrRNT8K0ID1gjg4syWSW0TvM8lZsRDCR3JNMvq/Y52nIO7gmwHAg+BBBavDD<br>bNcHE+VlX6qwbFpk+D5z79KzmcG1DFKgjINd7YydwU5DuFWgDOsu9zP/2RlZon02<br>y4wXwwoD9PDt8TekDRLmd82vwEkI8NGCVD6zST1P93iUrE6FRq6syv921/zzupFg<br>cdXmOG2O3qVap+n9DZP+ON3anJI0jy2pD8BEKoeC3QbBwvAjYmLIRmmENtf8Gyq2<br>isP2yJjC5f0K5NAbSdi6ArFZahOGyg3Bh5hBq/bH9OsBj5xXo0UaP9fBAvRdzudX<br>Zfrj84FC6/fBCTGWbT0alH8eoshOS+eSIuTCE/IsL+0ZuxmHVFeclDRJV3TH9fQp<br>hga3E4vROQWhIMDk1h5ZJRqSi8FXALjk7QsRm0lUqdotqb+qsUz+9mQEYWWSNb1B<br>0XK0nbPhK01AQf8mp58aQllDTwZxKwrO6Pv0Lcd45LmayF4HwBmEt+1vzsjgc7eY<br>4U6eBMF79vtNU4NnQeBX3ap3Qn4C37Ij52NUbNILLetHvXi/ABEBAAGJAjwEGAEK<br>ACYWIQQH4ZGanFnQSVm+SEZoHV6pEdB2VwUCXsfv2gIbIAUJCWYBgAAKCRBoHV6p<br>EdB2VwXSEACd6u2NciPoNf8yTXe6t2TuKOe0hZdBKsGfT3J2cJIBnYnn1rduQPz3<br>C0gKNF2EwmctmG5LRpwl9dBBCqrnCIUw3DcHAwHpEZLdp3c0KaeNlmJbWFUco2fW<br>AF7Z+yJ1jmp0abzgmPDIt7CvWhew914j6VzdNHIgVK9NnCMvfHIEJCJrxaiI1I4z<br>1J+hA+1nxSXP2OP4ivfAUrSbXtdgzRE8Ad3reaDXuVTkFeRg3YFjYiyW6wNBWsm/<br>nP+8fWnB5YS8vuubiKIQk1P4GdLhXi4kQYXYwXRojPfBPtilLFeiRmP3P0bXjPPp<br>qhwmzil0X0hzDaS5QVaVK25dlRardmAfMvTLbPu+qEU00GFYPoOCAjfcNFPjBl+E<br>Ul4eFhkDDz7CR0yLimXis6YGGmdwnUqdPitlQtM1e4H0D3KCRQXR+eoUv4sXU8wt<br>u6Sr0Nc/drueVHl6YwRnHOqm4v7w+vsHG1OdnmO+SsynRtxG4CYj8HUGHBBoGo7D<br>IG+IKtj0ibAt58/1i7lTON0XU/JVgg7zLbo99033+z5vvLX+gT5Ge3GfuLnLa8J0<br>c5g3eMkD9yEdw6NciuS1YvrE0aox5Yfdc28RRy7xMeMP4wQjXiYROouqRWEMQ80d<br>4rLxNFoqlP6GVyVfstNGGPI7X5FIJG/w/frSw/X0dgTBRdVCPyHvzQ==<br>=3ViI<br>-----END PGP PUBLIC KEY BLOCK-----</p>
+                </div>
+            </section>
+
+        </article>
+
+    </div>
+</main>
+
+
+
+
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="../index.html">Pavle&#x27;s Blog</a> &copy; 2020</section>
+                <nav class="site-footer-nav">
+                    <a href="../index.html">Latest Posts</a>
+                    
+                    <a href="https://twitter.com/pavlenex" target="_blank" rel="noopener">Twitter</a>
+                    <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="../assets/built/casper.js@v=b867028077"></script>
+
+    <script>
+        // Parse the URL parameter
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        // Give the parameter a variable name
+        var action = getParameterByName('action');
+
+        $(document).ready(function () {
+            if (action == 'subscribe') {
+                $('body').addClass("subscribe-success");
+            }
+
+            $('.subscribe-success-message .subscribe-close').click(function () {
+                $('.subscribe-success-message').addClass('close');
+            });
+
+            // Reset form on opening subscrion overlay
+            $('.subscribe-button').click(function() {
+                $('.subscribe-overlay form').removeClass();
+                $('.subscribe-email').val('');
+            });
+        });
+    </script>
+
+    <script>
+    $(function() {
+        var $postContent = $(".post-full-content");
+        $postContent.fitVids();
+    });
+</script>
+
+
+    
+
+</body>
+</html>
